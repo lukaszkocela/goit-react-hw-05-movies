@@ -17,8 +17,9 @@ const Movies = () => {
       }
     };
 
-   useEffect(() => {
-    asyncFunc(query);
+  useEffect(() => {
+     // eslint-disable-next-line
+     asyncFunc();
   }, [query]);
 
   const handleSubmit = e => {

@@ -16,8 +16,9 @@ const Reviews = () => {
       }
     };
 
-    useEffect(() => {
-    asyncFunc(id);
+  useEffect(() => {
+      // eslint-disable-next-line
+      asyncFunc();
   }, [id]);
 
   return (

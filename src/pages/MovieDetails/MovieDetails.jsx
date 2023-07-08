@@ -22,7 +22,8 @@ const MovieDetails = () => {
     };
 
   useEffect(() => {
-    asyncFunc(id);
+    // eslint-disable-next-line
+    asyncFunc();
   }, [id]);
 
   return (
