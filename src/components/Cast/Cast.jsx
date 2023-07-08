@@ -15,7 +15,7 @@ const Cast = () => {
     };
 
   useEffect(() => {
-   // eslint-disable-next-line
+   eslint-disable-next-line
     asyncFunc();
   }, [id]); 
 
