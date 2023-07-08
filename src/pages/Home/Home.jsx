@@ -5,15 +5,16 @@ import { getMovies } from 'services/API';
 const Home = () => {
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    const asyncFunc = async () => {
+   const handleHome = async () => {
       try {
         setMovies(await getMovies());
       } catch (error) {
         console.log(error);
       }
     };
-    asyncFunc();
+
+  useEffect(() => {
+    handleHome();
   }, []);
 
   return (

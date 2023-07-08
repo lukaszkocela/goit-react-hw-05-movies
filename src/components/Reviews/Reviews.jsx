@@ -8,15 +8,16 @@ const Reviews = () => {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    const asyncFunc = async () => {
+     const handleReviews = async () => {
       try {
         setReviews(await getReviews(id));
       } catch (error) {
         console.log(error);
       }
     };
-    asyncFunc();
+
+  useEffect(() => {
+    handleReviews();
   }, [id]);
 
   return (
