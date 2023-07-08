@@ -6,7 +6,7 @@ const Cast = () => {
   const [cast, setCast] = useState([]);
   const { id } = useParams();
 
-      const handleCast = async () => {
+      const asyncFunc = async () => {
       try {
         setCast(await getCast(id));
       } catch (error) {
@@ -14,9 +14,9 @@ const Cast = () => {
       }
     };
 
-  useEffect(() => {
-    handleCast(cast);
-  }, [setCast]);
+ useEffect(() => {
+    asyncFunc();
+  }, [id]);
 
   return (
     <ul>

@@ -8,7 +8,7 @@ const Reviews = () => {
 
   const { id } = useParams();
 
-     const handleReviews = async () => {
+      const asyncFunc = async () => {
       try {
         setReviews(await getReviews(id));
       } catch (error) {
@@ -16,9 +16,9 @@ const Reviews = () => {
       }
     };
 
-  useEffect(() => {
-    handleReviews(reviews);
-  }, [setReviews]);
+    useEffect(() => {
+    asyncFunc();
+  }, [id]);
 
   return (
     <ul>

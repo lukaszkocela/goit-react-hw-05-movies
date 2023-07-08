@@ -11,7 +11,7 @@ const MovieDetails = () => {
 
   const link = location.state?.from ?? '/';
 
-      const handleMovieDetails = async () => {
+      const asyncFunc = async () => {
       try {
         const movieDetails = await getMovieDetails(id);
         setMovieDetails(movieDetails);
@@ -22,8 +22,8 @@ const MovieDetails = () => {
     };
 
   useEffect(() => {
-    handleMovieDetails(movieDetails, genres);
-  }, [setMovieDetails, setGenres]);
+    asyncFunc();
+  }, [id]);
 
   return (
     <>

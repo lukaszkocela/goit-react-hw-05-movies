@@ -9,7 +9,7 @@ const Movies = () => {
   const [moviesList, setMoviesList] = useState([]);
   const query = searchParams.get('query') ?? '';
 
-     const handleMovies = async () => {
+      const asyncFunc = async () => {
       try {
         setMoviesList(await searchMovies(query));
       } catch (error) {
@@ -17,9 +17,9 @@ const Movies = () => {
       }
     };
 
-  useEffect(() => {
-    handleMovies(moviesList);
-  }, [setMoviesList]);
+   useEffect(() => {
+    asyncFunc();
+  }, [query]);
 
   const handleSubmit = e => {
     e.preventDefault();
