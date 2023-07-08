@@ -18,7 +18,6 @@ const Movies = () => {
     };
 
   useEffect(() => {
-     eslint-disable-next-line
      asyncFunc();
   }, [query]);
 
