@@ -23,7 +23,7 @@ const MovieDetails = () => {
 
   useEffect(() => {
     handleMovieDetails();
-  }, [id]);
+  }, [movieDetails, genres]);
 
   return (
     <>

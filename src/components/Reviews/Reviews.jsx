@@ -18,7 +18,7 @@ const Reviews = () => {
 
   useEffect(() => {
     handleReviews();
-  }, [id]);
+  }, [reviews]);
 
   return (
     <ul>

@@ -19,7 +19,7 @@ const Movies = () => {
 
   useEffect(() => {
     handleMovies();
-  }, [query]);
+  }, [moviesList]);
 
   const handleSubmit = e => {
     e.preventDefault();
