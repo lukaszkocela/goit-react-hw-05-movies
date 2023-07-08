@@ -9,17 +9,11 @@ const Movies = () => {
   const [moviesList, setMoviesList] = useState([]);
   const query = searchParams.get('query') ?? '';
 
-      const asyncFunc = async () => {
-      try {
-        setMoviesList(await searchMovies(query));
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
   useEffect(() => {
-     asyncFunc();
-  }, [query]);
+         searchMovies(query)
+      .then(response => setMoviesList(response))
+      .catch(error => console.log(error));
+  }, [query, setSearchParams]);
 
   const handleSubmit = e => {
     e.preventDefault();

@@ -13,7 +13,7 @@ export const Navigation = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
-  font - size: 24px;
+  font-size: 24px;
   font-weight: bold;
   color: darkgrey;
   text-decoration: none;

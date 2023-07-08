@@ -11,18 +11,13 @@ const MovieDetails = () => {
 
   const link = location.state?.from ?? '/';
 
-      const asyncFunc = async () => {
-      try {
-        const movieDetails = await getMovieDetails(id);
-        setMovieDetails(movieDetails);
-        setGenres(movieDetails.genres);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
   useEffect(() => {
-    asyncFunc();
+    getMovieDetails(id)
+      .then(response => {
+        setMovieDetails(response);
+        setGenres(response.genres);
+      })
+      .catch(error => console.log(error));
   }, [id]);
 
   return (
