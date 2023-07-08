@@ -22,7 +22,7 @@ const MovieDetails = () => {
     };
 
   useEffect(() => {
-    asyncFunc();
+    asyncFunc(id);
   }, [id]);
 
   return (

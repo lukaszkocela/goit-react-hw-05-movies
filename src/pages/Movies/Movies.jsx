@@ -18,7 +18,7 @@ const Movies = () => {
     };
 
    useEffect(() => {
-    asyncFunc();
+    asyncFunc(query);
   }, [query]);
 
   const handleSubmit = e => {

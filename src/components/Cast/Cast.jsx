@@ -15,7 +15,7 @@ const Cast = () => {
     };
 
  useEffect(() => {
-    asyncFunc();
+    asyncFunc(id);
   }, [id]);
 
   return (

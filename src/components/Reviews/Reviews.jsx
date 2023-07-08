@@ -17,7 +17,7 @@ const Reviews = () => {
     };
 
     useEffect(() => {
-    asyncFunc();
+    asyncFunc(id);
   }, [id]);
 
   return (
