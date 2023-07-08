@@ -18,8 +18,8 @@ const Movies = () => {
     };
 
   useEffect(() => {
-    handleMovies();
-  }, [moviesList]);
+    handleMovies(moviesList);
+  }, [setMoviesList]);
 
   const handleSubmit = e => {
     e.preventDefault();

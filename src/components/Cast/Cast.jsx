@@ -15,8 +15,8 @@ const Cast = () => {
     };
 
   useEffect(() => {
-    handleCast();
-  }, [cast]);
+    handleCast(cast);
+  }, [setCast]);
 
   return (
     <ul>

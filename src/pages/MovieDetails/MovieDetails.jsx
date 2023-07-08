@@ -22,8 +22,8 @@ const MovieDetails = () => {
     };
 
   useEffect(() => {
-    handleMovieDetails();
-  }, [movieDetails, genres]);
+    handleMovieDetails(movieDetails, genres);
+  }, [setMovieDetails, setGenres]);
 
   return (
     <>

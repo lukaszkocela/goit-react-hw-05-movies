@@ -17,8 +17,8 @@ const Reviews = () => {
     };
 
   useEffect(() => {
-    handleReviews();
-  }, [reviews]);
+    handleReviews(reviews);
+  }, [setReviews]);
 
   return (
     <ul>
